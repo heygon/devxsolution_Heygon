@@ -30,7 +30,7 @@ Seguindo a mesma ideia dos anteriores, a porta do react pode ser alterado para p
 <br/>
 <h3 style="color:#1267fc"> Rodando o projeto </h3>
 Com as configurações das portas prontas, para rodar o projeto execute o comando:
-<code>docker-compose -up -d</code>
+<code>docker-compose up -d</code>
 
 Esse comando vai iniciar os containers do Postgres e criar o banco de dados, o Backend Nodejs e o Frontend React.
 
