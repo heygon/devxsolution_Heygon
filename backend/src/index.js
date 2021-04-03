@@ -1,13 +1,11 @@
 const express    = require('express');
 const cors       = require('cors');
+const swaggerUi  = require('swagger-ui-express')
 require('dotenv').config({
     path: process.env.NODE_ENV === 'test' ? 'env.test' : '.env'
 })
 
 const client = require('../database/config');
-
-const swaggerUi = require('swagger-ui-express')
-const swaggerFile = require('../swagger_output.json')
 
 const app = express();
 
@@ -20,7 +18,7 @@ app.get('/', (req, res) => {
 
 app.use('/', require('./router'));
 
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(require('../swagger_output.json')))
 
 app.listen(3000);
 console.log('Servidor rodando na posta 3678');
