@@ -16,6 +16,11 @@
     color:#fff;
     cursor:pointer;
 }
+.activeItem{
+    background: linear-gradient(to bottom, var(--primary-light), var(--primary));
+    color:#fff;
+    cursor:pointer;
+}
 .landing .sizes .size{
     height: 40px;
     width: 40px;

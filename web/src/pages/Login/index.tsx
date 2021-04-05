@@ -19,8 +19,8 @@ function Login() {
             pass: senha,
         }).then((e) => {
             if(e.data.resp === 's' && e.data.Usuario.name !== undefined){
-                localStorage.setItem('DadosCoodesh',JSON.stringify(e.data.Usuario));
-                history.push("/home");
+                localStorage.setItem('DadosDevx',JSON.stringify(e.data.Usuario));
+                history.push("/");
             }else{
                 alert('Usuário não encontrado');
             }
@@ -40,7 +40,7 @@ function Login() {
                         <img src={Logo} alt="Logo" style={{ marginTop : '80px', width : '60%', marginLeft : '15%' }}/>
                     </div>
                     <div className="col s6">
-                        <h5 className="center-align" style={{ fontWeight : 'bold' }}>Login</h5>
+                        <h5 className="center-align" style={{ fontWeight : 'bold' }}>Signin</h5>
                         <div className="col s12">&nbsp;</div>
                         <div className="input-group input-group-lg mb-3">
                             <strong className="col s12">E-mail</strong>
