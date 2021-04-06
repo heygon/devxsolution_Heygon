@@ -38,12 +38,17 @@ module.exports = {
             images
         } = req.body;
 
+        //console.log(req.body);
+
         if(name == undefined || price == undefined){
             return res.status(400).json({ resp: 'n' });
         }else{
             client.query("INSERT INTO Products (name,description,price,images,status,published_at) VALUES ('"+name+"','"+description+"','"+price+"','"+images+"','1',NOW()) ", (err, resp) => {
                 if(err){ return res.status(400).json({ resp: 'n' }); }
-                return res.status(200).json({ resp: 's', product : resp.rows[0] });
+                client.query("SELECT * FROM Products ORDER BY id DESC LIMIT 1 ", (err, respr) => {
+                    console.log(respr);
+                    return res.status(200).json({ resp: 's', product : respr.rows[0] });
+                });
             });
         }
         

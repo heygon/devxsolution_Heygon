@@ -9,8 +9,7 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "dev": "nodemon src/index.js --ignore __tests__",
-    "swagger": "node src/swagger.js",
-    "seed": "NODE_ENV=test node database/seed/seed.js"
+    "swagger": "node src/swagger.js"
   },
   "keywords": [],
   "author": "",
