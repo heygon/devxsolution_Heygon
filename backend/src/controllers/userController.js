@@ -26,13 +26,14 @@ module.exports = {
             }    
         */
 
-        console.log(req.body);
+        //console.log(req.body);
         const { email, pass } = req.body;
 
     
         try {
             
             const password = SHA1(pass+email).toString();
+            //console.log(password);
             client.query("SELECT email,pass FROM Clients WHERE email = '"+email+"' AND pass = '"+password+"' ", (err, resp) => {
                 if(err){
                     return res.status(401).json({ resp: 'n1'}); // #swagger.responses[401]
@@ -105,7 +106,7 @@ module.exports = {
             pass,
             email
         } = req.body;
-    
+
         client.query("SELECT email FROM Clients WHERE email = '"+email+"' ", (err, resp) => {
             if(resp.rows.length >= 1){
                 return res.status(401).json({ resp: 'repetido', tipo : 'Email' });
