@@ -6,10 +6,15 @@ import Logo from './../../assets/images/devxlogo.jpg';
 
 function MenuTopo(){
 
-    const dados = JSON.parse(localStorage.DadosDevx);
     let login = 0;
-    if(dados != undefined){
-        login = 1;
+    let dados = {
+        name : ''
+    };
+    if(localStorage.DadosDevx != undefined){
+        dados = JSON.parse(localStorage.DadosDevx);
+        if(dados != undefined){
+            login = 1;
+        }
     }
 
     return (

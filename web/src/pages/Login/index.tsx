@@ -53,12 +53,9 @@ function Login() {
                         <div className="col s12">&nbsp;</div>
                         <div className="col s12 btn blue btn-lg" onClick={realizarLogin}>Entrar</div>
                         <div className="col s12">&nbsp;</div>
-                        <div className="col s12">
-                            <Link to="/recuperarSenha" className="cursor-pointer col s5 p-0">
-                                <strong>Recuperar senha</strong>
-                            </Link>
-                            <span className="col s3 center-align">OU</span> 
-                            <Link to="/cadastro"  className="cursor-pointer right-align col s4 p-0">
+                        <div className="col s12 center-align">
+                            
+                            <Link to="/cadastro"  className="cursor-pointer right-align">
                                 <strong>Cadastre-se</strong>
                             </Link>
                         </div>

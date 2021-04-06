@@ -35,10 +35,12 @@ function Landing() {
     });
     
 
-    const dados = JSON.parse(localStorage.DadosDevx);
     let login = 0;
-    if(dados != undefined){
-        login = 1;
+    if(localStorage.DadosDevx != undefined){
+        const dados = JSON.parse(localStorage.DadosDevx);
+        if(dados != undefined){
+            login = 1;
+        }
     }
 
 
@@ -84,7 +86,7 @@ function Landing() {
 
 
     function saveEditProduct() {
-        let dadod = JSON.parse(localStorage.DadosDevx);
+        let dados = JSON.parse(localStorage.DadosDevx);
         api.put('products/'+produtoVitrine.id,{
             name: newName,
             description: newDescription,
@@ -138,7 +140,7 @@ function Landing() {
     function registerNewProduct() {
         console.log('iniciando o cadastro');
 
-        let dadod = JSON.parse(localStorage.DadosDevx);
+        let dados = JSON.parse(localStorage.DadosDevx);
 
         api.post("products", {
             name : newName,
