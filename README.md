@@ -31,8 +31,8 @@ Seguindo a mesma ideia dos anteriores, a porta do react pode ser alterado para p
 <h3 style="color:#1267fc"> Rodando o projeto </h3>
 Com as configurações das portas prontas, para rodar o projeto execute o comando:
 <code>docker-compose up -d</code>
+Esse comando vai iniciar os containers do Postgres e criar o banco de dados, o Backend Nodejs e o Frontend React. O sistema frontend pode ser acessado pelo login <code>http://localhost:3001</code>. Além do front end, temos outros links que podem ser acessados como a documentação de api que pode ser acessado pelo link <code>http://localhost:3678/doc</code> e o link <code>http://localhost:3678/files/urlImage</code> que é usado para acessar as imagens trocando a palavra urlImage para o nome da imagem cadastrado no banco. Além disso no arquivo <code>package.json</code> existem alguns comandos para executar o teste automatizado e atualizar a documentação.
 
-Esse comando vai iniciar os containers do Postgres e criar o banco de dados, o Backend Nodejs e o Frontend React.
 
 <br/>
 <h3 style="color:#1267fc"> Acessando o front </h3>
